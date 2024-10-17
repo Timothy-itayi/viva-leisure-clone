@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Hamburger from './Hamburger';
+import Hamburger from './Hamburger'; // Assuming you have a Hamburger component
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -13,77 +13,64 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-black text-white flex justify-between items-center px-8 py-4">
-      <div className="flex items-center">
-        <Image
-          src="/assets/republic-logo.png"
-          width={190}
-          height={100}
-          alt="hiit republic logo"
-          className=""
-        />
+    <div className="bg-black text-white flex justify-between items-center px-8 py-4 relative">
+      {/* Logo */}
+      <div className=" items-center static">
+      <Link href="/">
+      <Image
+  src="/assets/republic-logo.png"
+  width={200}
+  height={200}
+  alt="hiit republic logo"
+  className="w-[200px] h-[auto]" // Fixed width and height
+/>
+
+  </Link>
       </div>
+
       {/* Hamburger button for small screens */}
-      <div className="sm:hidden">
-        <button onClick={toggleHamburger} className="focus:outline-none">
+      <div className="sm:hidden absolute top-4 right-4">
+        <button onClick={toggleHamburger} className="focus:outline-none z-20 ">
           <Hamburger isOpen={isOpen} />
         </button>
       </div>
-      {/* Full menu for larger screens */}
-      
-      <div className={`fixed  inset-0 z-50 bg-black bg-opacity-90 transition-all duration-300 ease-in-out sm:relative sm:z-auto sm:bg-transparent ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
+
+      {/* Full menu for larger screens, hamburger for mobile */}
+      <div
+        className={`absolute left-0 w-full bg-black bg-opacity-90 transition-all duration-300 ease-in-out z-10 sm:relative sm:h-auto sm:bg-transparent sm:flex sm:justify-center sm:items-center ${
+          isOpen ? 'top-[110px] opacity-100 translate-x-0' : 'top-0 opacity-0 -translate-x-full'
+        } sm:opacity-100 sm:translate-x-0 sm:top-auto`}
+      >
         <ul className="flex flex-col items-center justify-center h-full space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6 text-lg">
-        <li className="py-2">
-          <Link
-            href="/"
-            className="text-white text-sm font-regular hover:text-[#ff6c3a]"
-          
-          >
-            Home
-          </Link>
-        </li>
-        <li className="py-2">
-          <Link
-            href="/studio"
-            className="text-white text-sm font-regular hover:text-[#ff6c3a]"
-          
-          >
-            Studios
-          </Link>
-        </li>
-        <li className="py-2">
-          <Link
-            href=""
-            className="text-white text-sm font-regular hover:text-[#ff6c3a]"
-          
-          >
-            About
-          </Link>
-        </li>
-        <li className="py-2">
-          <Link
-            href=""
-            className="text-white text-sm font-regular hover:text-[#ff6c3a]"
-          
-          >
-            Contact us
-          </Link>
-        </li>
-        <li className="py-2">
-          <Link
-            href=""
-            className="text-white text-sm font-regular hover:text-[#ff6c3a]"
-          
-          >
-            SHOWDOWN
-          </Link>
-        </li>
-      </ul>
+          <li className="py-2">
+            <Link href="/" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
+              Home
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="/studio" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
+              Studios
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
+              About
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link href="https://timothyitayi.com" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
+              Contact us
+            </Link>
+          </li>
+  
+        </ul>
       </div>
-      {/* Buttons on the right */}
+
+      {/* Buttons on the right (only visible on larger screens) */}
       <div className="hidden sm:flex space-x-4">
-        <button className="border-2 border-white px-4 py-2">LOGIN</button>
-        <button className="bg-white text-black px-4 py-2">JOIN NOW</button>
+     
+        <p className="bg-white text-black px-4 py-2">JOIN NOW</p>
+        
       </div>
     </div>
   );
