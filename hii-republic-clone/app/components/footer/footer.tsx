@@ -16,14 +16,14 @@ const Footer: React.FC = () => {
                         Remember, every clone has its charm, and ours is just a bit goofier!
                     </p>
                 </div>
-                <div className="flex flex-col w-full md:w-1/4 mb-6 md:mb-0">
+                <div className="flex flex-col w-full md:w-1/4 mb-6 md:mb-0 text-center">
                     <h2 className="text-xl font-bold mb-4 footer-title-font">Social Links</h2>
                     <ul className="text-sm">
                         <li className="mb-2 hover:text-[#ff6c3a]">Instagram</li>
                         <li className="mb-2 hover:text-[#ff6c3a]" >Facebook</li>
                     </ul>
                 </div>
-                <div className="flex flex-col w-full md:w-1/4 mb-6 md:mb-0">
+                <div className="flex flex-col w-full md:w-1/4 mb-6 md:mb-0 text-center" >
                     <h2 className="text-xl font-bold mb-4">Quick Links</h2>
                     <ul className="text-sm ">
                         <li className="mb-2 hover:text-[#ff6c3a] ">Welcome to HIIT Republic</li>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                         <li className="mb-2 hover:text-[#ff6c3a]">Disclaimer: We Lift Heavy</li>
                     </ul>
                 </div>
-                <div className="flex justify-center items-start  md:w-1/4 mb-6 md:mb-0">
+                <div className="flex justify-center items-start  md:w-1/4 mb-6 md:mb-0 text-center">
                     <Image
                         src="/assets/Hit-logo.jpg"
                         alt="hiit-logo"
@@ -43,9 +43,9 @@ const Footer: React.FC = () => {
                     />
                 </div>
             </div>
-            <div className="flex justify-between items-center">
-                <nav>
-                    <ul className="flex space-x-4 text-sm">
+    
+                {/* <div className='flex flex-row'>
+                    <ul className=" space-x-4 text-sm">
                         <li><a href="#" className="text-orange-500">Home</a></li>
                         <li><a href="#" className="hover:text-orange-500">Studios</a></li>
                         <li><a href="#" className="hover:text-orange-500">Classes</a></li>
@@ -54,12 +54,12 @@ const Footer: React.FC = () => {
                         <li><a href="#" className="hover:text-orange-500">Contact us</a></li>
                         <li><a href="#" className="hover:text-orange-500">SHOWDOWN</a></li>
                     </ul>
-                </nav>
-                <div className="text-xs">
+                </div> */}
+                <div className="text-xs ">
                     © 2024 www.hiitrepublic.com.au. All rights reserved.
                 </div>
             </div>
-        </div>
+    
     );
 };
 
