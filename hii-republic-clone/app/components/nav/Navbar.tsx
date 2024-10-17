@@ -13,6 +13,7 @@ export default function Navbar() {
   };
 
   return (
+    <div className='fixed w-full'>
     <div className="bg-black text-white flex justify-between items-center px-8 py-4 relative">
       {/* Logo */}
       <div className=" items-center static">
@@ -69,9 +70,10 @@ export default function Navbar() {
       {/* Buttons on the right (only visible on larger screens) */}
       <div className="hidden sm:flex space-x-4">
      
-        <p className="bg-white text-black px-4 py-2">JOIN NOW</p>
+
         
       </div>
+    </div>
     </div>
   );
 }
