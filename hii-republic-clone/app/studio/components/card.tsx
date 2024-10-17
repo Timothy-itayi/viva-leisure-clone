@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({ title, address }) => {
         </h2>
         <p className="mb-4 whitespace-pre-line">{address}</p>
       </div>
-      <button className="border border-red-500  text-red-500 px-4 py-2 mt-auto hover:bg-red-500 hover:text-white transition-colors">
+      <button className="border rounded-lg border-[#ff6c3a] text-white font-bold px-4 py-2 mt-auto hover:bg-[#ff6c3a] hover:text-white transition-colors">
         MORE INFO
       </button>
     </div>
