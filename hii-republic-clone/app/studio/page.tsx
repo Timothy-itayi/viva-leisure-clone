@@ -4,8 +4,8 @@ import Card from './components/card'; // Import the Card component
 
 const Studios: React.FC = () => {
   return (
-    <div className='py-10'>
-      <div className="py-20 px-9">
+    <div className='py-10 bg-black'>
+      <div className="py-20 px-9 bg-black">
         <div className="border-b flex flex-col sm:flex-row justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">19<br />LOCATIONS</h1>
           {/* Centering the search bar */}
