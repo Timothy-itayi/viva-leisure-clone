@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed w-full">
-      <div className="bg-black text-white flex justify-between items-center px-8 py-4 relative">
+      <div className="bg-black text-white flex  items-center px-8 py-4 relative">
         {/* Logo */}
         <div className="items-center static">
           <Link href="/">
@@ -29,10 +29,17 @@ export default function Navbar() {
           </Link>
         </div>
 
-     
+        {/* Hamburger button for small screens */}
+        <button
+          onClick={toggleHamburger}
+          className="focus:outline-none z-20 sm:hidden absolute top-4 right-4"
+        >
+          <Hamburger isOpen={isOpen} />
+        </button>
+
         {/* Full menu for larger screens */}
-   
-          <ul className="flex flex-col items-center justify-center h-full space-y-4 sm:flex-row">
+   <div className=' flex-grow flex justify-center sm:flex hidden'>
+   <ul className=" flex space-x-8 ">
             <li>
               <Link href="/" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
                 Home
@@ -54,14 +61,9 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-    {/* Hamburger button for small screens */}
-    <button
-          onClick={toggleHamburger}
-          className="focus:outline-none z-20 sm:hidden absolute top-4 right-4"
-        >
-          <Hamburger isOpen={isOpen} />
-        </button>
-
+ 
+   </div>
+        
 
         {/* Drawer for mobile screens */}
         <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
