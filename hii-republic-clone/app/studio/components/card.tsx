@@ -1,7 +1,7 @@
 "use client"; // Ensure this component is treated as a client component
 
 import Image from 'next/image';
-import Link from 'next/link';
+
 
 interface CardProps {
   title: string;

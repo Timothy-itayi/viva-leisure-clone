@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Hamburger from './Hamburger';
-import Drawer from './Drawer'; // Import the Drawer component
+import Drawer from './Drawer'; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
