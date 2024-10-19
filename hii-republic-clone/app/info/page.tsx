@@ -84,7 +84,7 @@ const InfoPage: React.FC = () => {
         {!loading && (
           <div className="mt-8 border border-white p-6">
             <h2 className="text-2xl text-orange-500 font-bold mb-2">GET A 7 DAY FREE TRIAL!</h2>
-            <p className="mb-4">Register your details below and we'll be in touch!</p>
+            <p className="mb-4">Register your details below and we&apos;ll be in touch!</p>
             <div className="grid grid-cols-2 gap-4 mb-4">
               <input type="text" placeholder="Given Names" className="bg-white text-black px-3 py-2 w-full" />
               <input type="text" placeholder="Last Name" className="bg-white text-black px-3 py-2 w-full" />
