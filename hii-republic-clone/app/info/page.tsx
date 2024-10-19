@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation'; // Import for search params
 import locations from '../data/locations'; // Adjust the path if necessary
-import Loading from './components/loading'; // Import the Loading component
+import Loading from './InfoComponents/Loading'; // Import the Loading component
 
 // Define an interface for the Location object
 interface Location {
