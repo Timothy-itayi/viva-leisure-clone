@@ -1,6 +1,6 @@
 "use client"; // Ensures this component runs on the client
 
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation'; // Import for search params
 import locations from '../data/locations'; // Adjust the path if necessary
 import Loading from './InfoComponents/Loading'; // Import the Loading component
@@ -106,4 +106,11 @@ const InfoPage: React.FC = () => {
   );
 };
 
-export default InfoPage;
+// Wrap InfoPage in Suspense
+const WrappedInfoPage: React.FC = () => (
+    <Suspense fallback={<Loading />}>
+      <InfoPage />
+    </Suspense>
+  );
+  
+  export default WrappedInfoPage;
