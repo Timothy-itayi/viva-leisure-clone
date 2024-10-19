@@ -50,11 +50,7 @@ export default function Navbar() {
                 Studios
               </Link>
             </li>
-            <li>
-              <Link href="" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
-                About
-              </Link>
-            </li>
+       
             <li>
               <Link href="https://timothyitayi.com" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
                 Contact us
@@ -79,11 +75,7 @@ export default function Navbar() {
               Studios
             </Link>
           </li>
-          <li className="py-2">
-            <Link href="" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
-              About
-            </Link>
-          </li>
+     
           <li className="py-2">
             <Link href="https://timothyitayi.com" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
               Contact us
