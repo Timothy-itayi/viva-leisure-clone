@@ -39,7 +39,7 @@ const Studios: React.FC = () => {
           </div>
         </div>
 
-        /* Display filtered locations */
+        {/* Display filtered locations */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {filteredLocations.map((location, index) => (
             <Card key={index} title={location.name} address={location.address} imageSrc='/assets/hiit2.png' />
