@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 
 const Footer: React.FC = () => {
     return (
@@ -19,12 +20,18 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col w-full md:w-1/4 mb-6 md:mb-0 text-center">
                     <h2 className="text-xl font-bold mb-4 footer-title-font">Social Links</h2>
                     <ul className="text-sm">
-                        <li className="mb-2 hover:text-[#ff6c3a]">Instagram</li>
-                        <li className="mb-2 hover:text-[#ff6c3a]" >Facebook</li>
+                    <li className="mb-2 hover:text-[#ff6c3a]">
+                    <Link href="https://www.linkedin.com/in/timothy-itayi-ab8754138/" className="text-white text-sm font-regular hover:text-[#ff6c3a]">
+             LinkedIn
+              </Link>
+                    </li>
+                            
+                                      
+ 
                     </ul>
                 </div>
                 <div className="flex flex-col w-full md:w-1/4 mb-6 md:mb-0 text-center" >
-                    <h2 className="text-xl font-bold mb-4">Quick Links</h2>
+                    <h2 className="text-xl font-bold mb-4">Quick !Links</h2>
                     <ul className="text-sm ">
                         <li className="mb-2 hover:text-[#ff6c3a] ">Welcome to HIIT Republic</li>
                         <li className="mb-2 hover:text-[#ff6c3a]">Meet the Fit Fam</li>
